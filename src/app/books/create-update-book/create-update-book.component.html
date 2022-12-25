@@ -1,88 +1,16 @@
-<!-- <div class="create-container">
-    <form [formGroup]="createUpdateForm">
-        <div class="formContainer">
-            <div fxLayout="row" class="row-margin">
-                <div fxLayout="column" fxFlex="20">
-                    <label class="form-label"> Name <span class="flag-required">*</span></label>
-                </div>
-                <div fxLayout="column" fxFlex="40">
-                    <input type="text" matInput formControlName="name" class="controls-width">
-                </div>
-            </div>
-            <div fxLayout="row" class="row-margin">
-                <div fxLayout="column" fxFlex="20">
-                    <label class="form-label"> Image Url <span class="flag-required">*</span></label>
-                </div>
-                <div fxLayout="column" fxFlex="40">
-                    <input type="text" matInput formControlName="imageurl" class="controls-width">
-                </div>
-            </div>
-            <div fxLayout="row" class="row-margin">
-                <div fxLayout="column" fxFlex="20">
-                    <label class="form-label"> Date <span class="flag-required">*</span></label>
-                </div>
-                <div fxLayout="column" fxFlex="38">
-                    <mat-form-field appearance="outline">
-                        <input matInput [matDatepicker]="picker" formControlName="date">
-                        <mat-hint>MM/DD/YYYY</mat-hint>
-                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-                      </mat-form-field>
-                </div>
-            </div>
-            <div fxLayout="row" class="row-margin">
-                <div fxLayout="column" fxFlex="20">
-                    <label class="form-label"> Excerpt</label>
-                </div>
-                <div fxLayout="column" fxFlex="40">
-                    <textarea type="text" matInput formControlName="excerpt" class="controls-width"></textarea>
-                </div>
-            </div>
-            <div fxLayout="row" class="row-margin">
-                <div fxLayout="column" fxFlex="20">
-                    <label class="form-label"> Written <span class="flag-required">*</span></label>
-                </div>
-                <div fxLayout="column" fxFlex="38">
-                    <mat-form-field appearance="outline">
-                        <mat-select formControlName="written"  multiple>
-                          <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                </div>
-            </div>
-            <div class="btn-container">
-         <button (click)="CreateBook()" [disabled]="!createUpdateForm.valid">Create</button>
-            </div>
-        </div>
-    </form>
-</div>
- -->
-
 <form [formGroup]="createUpdateForm" class="form">
     <div fxLayout="row wrap">
         <mat-form-field class="form-element" fxFlex="0 0 50%">
             <mat-label>Name</mat-label>
             <input matInput formControlName="name" required>
-            <!-- <mat-error *ngIf="(submitted || form['name'].touched) && form['name'].invalid">
-            The field is required
-          </mat-error> -->
         </mat-form-field>
         <mat-form-field class="form-element" fxFlex="0 0 50%">
             <mat-label>Genere</mat-label>
             <input matInput formControlName="genere" required>
-            <!-- <mat-error *ngIf="(submitted || form['name'].touched) && form['name'].invalid">
-            The field is required
-          </mat-error> -->
         </mat-form-field>
         <mat-form-field class="form-element" fxFlex="0 0 50%">
             <mat-label>Image Url</mat-label>
             <input matInput formControlName="imageurl" required>
-            <!-- <mat-error *ngIf="(submitted || form['imageurl'].touched) && form['imageurl'].invalid && form['imageurl'].errors.required">
-            The field is required
-          </mat-error> -->
-            <!-- <mat-error *ngIf="(submitted || form['name'].touched) && form['email'].invalid && form['email'].errors.email">
-            The Email should contain @ and .
-          </mat-error> -->
         </mat-form-field>
         <mat-form-field class="form-element" fxFlex="0 0 50%">
             <mat-label>Date</mat-label>
@@ -90,19 +18,19 @@
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
         </mat-form-field>
-    
+
         <mat-form-field class="form-element" fxFlex="0 0 50%">
             <mat-label>Excerpt</mat-label>
             <textarea matInput formControlName="excerpt"></textarea>
         </mat-form-field>
-    
+
         <mat-form-field class="form-element" fxFlex="0 0 50%">
             <mat-label>Written By</mat-label>
             <mat-select formControlName="written" multiple>
                 <mat-option *ngFor="let person of writers" [value]="person">{{person}}</mat-option>
             </mat-select>
         </mat-form-field>
-    
+
         <mat-form-field class="form-element" fxFlex="0 0 50%">
             <mat-label>Publisher</mat-label>
             <mat-select formControlName="publisher">

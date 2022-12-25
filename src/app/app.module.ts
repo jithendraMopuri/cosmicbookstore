@@ -18,8 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     AppRoutingModule,
     MaterialExampleModule,
     StoreModule.forRoot({},{}),
-    EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({maxAge:25})
+    EffectsModule.forRoot([])
   ],
   providers: [],
   exports:[],

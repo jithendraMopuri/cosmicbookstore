@@ -7,7 +7,7 @@ export const initialState: ReadonlyArray<Book> = [
     {
         id : 'xer-123-134',
     name : 'Jithendra',
-    imageURL : 'https://',
+    imageURL : 'https://image.jpg',
     publicationDate : 'Mon Jan 01 1990 00:00:00 GMT+0530 (India Standard Time)',
     genere : 'horror',
     excerpt : 'excerpt',

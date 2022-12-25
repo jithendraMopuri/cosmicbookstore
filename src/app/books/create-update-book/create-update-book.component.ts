@@ -20,7 +20,7 @@ export class CreateUpdateBookComponent implements OnInit{
     publisher:[''],
     genere:['']
   });
-  public navigatePath : any = '';
+  public navigatePath;
   startDate = new Date(1990, 0, 1);
   public writers: string[] = ['J.K. Rowling', 'Amy Tan', 'Tana French', 'George R.R Martin', 'Atul Gawande'];
   public publishers : string[] = ['Arihant Books','Jaico Publishing House','Rupa Publications','Roli Books'];
@@ -54,11 +54,11 @@ export class CreateUpdateBookComponent implements OnInit{
     this.router.navigate(['/home']);
   }
   ngOnInit(): void {
-    if(this.navigatePath !== 'create') {
+    if(this.navigatePath && this.navigatePath !== 'create') {
       this.createUpdateForm.patchValue({
         name : history.state.name,
         imageurl : history.state.imageURL,
-        date: history.state.publicationDate,
+        date: new Date(history.state.publicationDate),
         excerpt:history.state.excerpt,
         written: history.state.writtenBy,
         publisher: history.state.publisher,

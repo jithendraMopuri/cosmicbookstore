@@ -1,9 +1,6 @@
 import { createAction, createActionGroup, props } from "@ngrx/store";
 import { Book } from "./books";
 
-// export const invokeBooksAPI = createAction(
-//     "[Books API] invoke books Fetch API"
-// )
 
 export const BooksActions = createActionGroup({
     source: 'Books',
