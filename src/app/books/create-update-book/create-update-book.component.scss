@@ -1,0 +1,58 @@
+
+
+// .flag-required{
+//     color:#bb0723;
+// }
+
+// .controls-width {
+//     width:93%;
+//     border:1px solid;
+//     height:32px;
+//     border-radius:4px;
+// }
+
+// .formContainer{
+//     margin-left: 30px;
+//     width:80%;
+// }
+
+// .form-label{
+//     display:block;
+//     text-align:left;
+//     font: bold 11px Arial,sans-serif;
+//     letter-spacing: 0;
+//     color: #4d4d4d;
+//     height:16px;
+//     margin-left: 20px;
+// }
+
+// .row-margin {
+//     margin-bottom: 10px;
+// }
+
+p {
+    font-family: Lato;
+  }
+  .fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  .form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .form-element {
+    padding: 5px 0px 25px 40px;
+    width: 100%;
+    &:last-child {
+        text-align: center;
+    }
+  }
+  

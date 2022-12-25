@@ -1,13 +1,28 @@
-import { NgModule } from '@angular/core';
+import { EnvironmentInjector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialExampleModule } from './material.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule],
+  declarations: [
+    AppComponent
+  ],
+  imports: [BrowserModule, 
+    BrowserAnimationsModule, 
+    AppRoutingModule,
+    MaterialExampleModule,
+    StoreModule.forRoot({},{}),
+    EffectsModule.forRoot([]),
+    StoreDevtoolsModule.instrument({maxAge:25})
+  ],
   providers: [],
+  exports:[],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
